@@ -1,0 +1,65 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "/home/root1/MERN/winston/success/.a4bd98631b60170f7d875b244a124971caeb5cc2-audit.json",
+    "files": [
+        {
+            "date": 1748844468481,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-12-success.log",
+            "hash": "e6f9a7a9329995bc1ba1cc48170ffb48c96fdc9307392e1e5cd33ae8dc6520df"
+        },
+        {
+            "date": 1748854764639,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-14-success.log",
+            "hash": "9a5698f0df457bf02699a361a1ca30978e15111d1d92a7661524f55ad076fc65"
+        },
+        {
+            "date": 1748854807480,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-15-success.log",
+            "hash": "4a8c39947ae81119a86bb85d779c4d23ac0c55fc91bc98fd39e04c1d7d5f95ea"
+        },
+        {
+            "date": 1748858405302,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-16-success.log",
+            "hash": "145993bb5190b8582433493c5b88d0702abfcf632ce5135684ca96bcd734f434"
+        },
+        {
+            "date": 1748862768174,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-17-success.log",
+            "hash": "9d53cde118bafa6694f4150eb54479a4ef108ada8c29179671aa299ec45e3823"
+        },
+        {
+            "date": 1748868116424,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-18-success.log",
+            "hash": "290e26ac2c4cdb897b60dd560127b2a00ff9e47d66e8682750e935739abb96b2"
+        },
+        {
+            "date": 1748870629694,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-19-success.log",
+            "hash": "7eca9c24ac7cb4f967216ec6e8303d46fac25787f2684abbf14b04543e1cc2c4"
+        },
+        {
+            "date": 1748873450799,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-20-success.log",
+            "hash": "42510e8d8722629b8ede8b3f5a20ae46bd05c762596dab9db4cdecd54c2ff950"
+        },
+        {
+            "date": 1748925426952,
+            "name": "/home/root1/MERN/winston/success/03-06-2025-10-success.log",
+            "hash": "80c7be2c946ebf38737010fff3e06b9fb4b15f8e0bb7a7ab28e0e48eaa070a83"
+        },
+        {
+            "date": 1748927339662,
+            "name": "/home/root1/MERN/winston/success/03-06-2025-11-success.log",
+            "hash": "719b40872bc2ec46a20d447fbbf7fa01de1e44ba6f87cf31a0ca12f0482f6ecc"
+        },
+        {
+            "date": 1748930546832,
+            "name": "/home/root1/MERN/winston/success/03-06-2025-12-success.log",
+            "hash": "1e784b3712943a3d18f0cda4a1ed6ffef5adda4ef1775cedc8088687892ebcca"
+        }
+    ],
+    "hashType": "sha256"
+}

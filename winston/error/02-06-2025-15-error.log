@@ -1,0 +1,12 @@
+Mon Jun 02 2025 15:17:20 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/user/signIn 500 - 21.519 ms
+Mon Jun 02 2025 15:17:40 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/user/signIn 500 - 8.029 ms
+Mon Jun 02 2025 15:41:28 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/auth/register 404 - 6.924 ms
+Mon Jun 02 2025 15:41:30 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/auth/register 404 - 0.883 ms
+Mon Jun 02 2025 15:41:46 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/auth/login 404 - 6.714 ms
+Mon Jun 02 2025 15:41:47 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/auth/login 404 - 2.018 ms
+Mon Jun 02 2025 15:41:52 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/user/login 500 - 59.234 ms
+Mon Jun 02 2025 15:42:0 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/user/login 500 - 48.909 ms
+Mon Jun 02 2025 15:42:1 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/user/login 500 - 50.582 ms
+Mon Jun 02 2025 15:51:36 [job-posting-backend] error: 10.0.60.22 - POST /api/v1/user/profile 404 - 2.647 ms
+Mon Jun 02 2025 15:53:18 [job-posting-backend] error: 10.0.60.22 - GET /api/v1/user/profile 500 - 16.335 ms
+Mon Jun 02 2025 15:55:12 [job-posting-backend] error: 10.0.60.22 - GET /api/v1/user/profile 401 - 5.342 ms

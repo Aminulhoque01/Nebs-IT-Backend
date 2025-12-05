@@ -1,0 +1,4 @@
+Mon Jun 02 2025 18:41:56 [job-posting-backend] info: 10.0.60.22 - OPTIONS /api/v1/user/signIn 204 - 0.127 ms
+Mon Jun 02 2025 18:41:56 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/signIn 200 - 60.801 ms
+Mon Jun 02 2025 18:49:49 [job-posting-backend] info: 10.0.60.22 - OPTIONS /api/v1/user/login 204 - 0.051 ms
+Mon Jun 02 2025 18:49:49 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/login 200 - 49.566 ms

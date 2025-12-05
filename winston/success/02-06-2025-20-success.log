@@ -1,0 +1,21 @@
+Mon Jun 02 2025 20:10:50 [job-posting-backend] info: 10.0.60.22 - OPTIONS /api/v1/user/signIn 204 - 0.161 ms
+Mon Jun 02 2025 20:10:50 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/signIn 200 - 59.049 ms
+Mon Jun 02 2025 20:12:38 [job-posting-backend] info: 10.0.60.22 - OPTIONS /api/v1/user/login 204 - 0.057 ms
+Mon Jun 02 2025 20:12:38 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/login 200 - 48.797 ms
+Mon Jun 02 2025 20:14:41 [job-posting-backend] info: 10.0.60.22 - OPTIONS /api/v1/user/signIn 204 - 0.121 ms
+Mon Jun 02 2025 20:14:41 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/signIn 200 - 51.405 ms
+Mon Jun 02 2025 20:14:54 [job-posting-backend] info: 10.0.60.22 - OPTIONS /api/v1/user/login 204 - 0.049 ms
+Mon Jun 02 2025 20:14:54 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/login 200 - 47.853 ms
+Mon Jun 02 2025 20:17:34 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:17:36 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:17:53 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:17:53 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
+Mon Jun 02 2025 20:18:4 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:18:4 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
+Mon Jun 02 2025 20:23:25 [job-posting-backend] info: 127.0.0.1 - POST /api/v1/user/signIn 200 - 56.175 ms
+Mon Jun 02 2025 20:34:17 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:34:17 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
+Mon Jun 02 2025 20:34:23 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:34:23 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
+Mon Jun 02 2025 20:34:27 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:34:27 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m

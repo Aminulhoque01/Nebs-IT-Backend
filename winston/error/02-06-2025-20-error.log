@@ -1,0 +1,4 @@
+Mon Jun 02 2025 20:17:34 [job-posting-backend] error: [31m🤢 Failed to connect Database[39m
+Mon Jun 02 2025 20:17:36 [job-posting-backend] error: [31m🤢 Failed to connect Database[39m
+Mon Jun 02 2025 20:22:58 [job-posting-backend] error: 127.0.0.1 - POST /api/v1/user/signIn 500 - 20.253 ms
+Mon Jun 02 2025 20:23:11 [job-posting-backend] error: 127.0.0.1 - POST /api/v1/user/signIn 500 - 7.212 ms

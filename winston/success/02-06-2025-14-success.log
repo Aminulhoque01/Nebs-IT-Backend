@@ -1,0 +1,9 @@
+Mon Jun 02 2025 14:59:42 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 14:59:42 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 14:59:42 [job-posting-backend] warn: Unable to connect to email server. Make sure you have configured the SMTP options in .env
+Mon Jun 02 2025 14:59:46 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 14:59:46 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 14:59:46 [job-posting-backend] warn: Unable to connect to email server. Make sure you have configured the SMTP options in .env
+Mon Jun 02 2025 14:59:52 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 14:59:52 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 14:59:52 [job-posting-backend] warn: Unable to connect to email server. Make sure you have configured the SMTP options in .env
