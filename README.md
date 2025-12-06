@@ -1,6 +1,6 @@
 # Project Name
 
-MERN-BACKEND
+Nebs-IT-BACKEND
 
 This is a template project for backend development using Typescript, Node.js, Express, Mongoose, Bcrypt, JWT, NodeMailer, Multer, ESLint, and Prettier. The aim is to reduce setup time for new backend projects.
 
@@ -10,14 +10,16 @@ This is a template project for backend development using Typescript, Node.js, Ex
 
 - **Data Validation:** Robust data validation using Zod and Mongoose schemas.
 
-- **Logging:** Logging with Winston and file rotation using DailyRotateFile.
-- **API Request Logging:** Logging API requests using Morgan.
+ 
 
 Route
 
-- singUp--> http://localhost:5000/api/v1/user/signIn
-- login--> http://localhost:5000/api/v1/user/login
-- profile--> http://localhost:5000/api/v1/user/profile
+- create-notice--> http://localhost:5000/api/v1/notice/create-notice                             (post)
+- get all notice--> http://localhost:5000/api/v1/notice/notices?page=1&limit=1&searchTerm=01     (get)
+- toggle-status--> http://localhost:5000/api/v1/notice/6933c4621f55e24f57239e6a/toggle-status    (patch)
+- single-notice--->http://localhost:5000/api/v1/notice/6933c4621f55e24f57239e6a                  (get)
+- delete-notice--->http://localhost:5000/api/v1/notice/6933c4621f55e24f57239e6a                  (delete)
+- updated-notice--->http://localhost:5000/api/v1/notice/6933c4621f55e24f57239e6a                  (put)
 
 # this application run:
 
@@ -56,7 +58,7 @@ Ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
+   git clone https://github.com/AminulHoque01/your-repository.git
    cd your-repository
    ```
 

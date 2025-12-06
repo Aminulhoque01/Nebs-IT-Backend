@@ -16,6 +16,6 @@ router.patch("/:id/toggle-status", NoticeController.toggleStatus);
  
 router.put("/:id",upload.fields([{ name: "attachment", maxCount: 1 }]), NoticeController.updatedNotice);
 
-router.patch("/:id", NoticeController.deleteNotice);
+router.delete("/:id", NoticeController.deleteNotice);
 
 export const NoticeRoutes = router;
