@@ -103,10 +103,31 @@ const updatedNotice = catchAsync(async (req: Request, res: Response) => {
 });
 
 
+const deleteNotice = catchAsync(async (req: Request, res: Response) => {
+  const noticeId = req.params.id;
+
+  const deleted = await NoticeService.deleteNotice(noticeId);
+
+  if (!deleted) {
+    return sendResponse(res, {
+      code: StatusCodes.NOT_FOUND,
+      message: "Notice not found",
+      data: null,
+    });
+  }
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "Notice deleted successfully",
+    data: deleted,
+  });
+});
+
 
 export const NoticeController = {
   createNotice,
   getAllNotices,
   toggleStatus,
-  updatedNotice
+  updatedNotice,
+  deleteNotice
 };

@@ -81,11 +81,16 @@ const updateNotice = async (id: string, updateData: any) => {
   return result; // this will be the updated document
 };
 
+const deleteNotice = async (id: string) => {
+  const result = await Notice.findByIdAndDelete(id);
+  return result; // returns the deleted document, or null if not found
+};
  
 
 export const NoticeService = {
   createNotice,
   getAllNotices,
   toggleStatus,
-  updateNotice
+  updateNotice,
+  deleteNotice
 };
