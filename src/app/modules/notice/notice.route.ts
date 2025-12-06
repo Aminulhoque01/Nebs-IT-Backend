@@ -1,23 +1,13 @@
+import { Router } from "express";
+import { NoticeController } from "./notice.controller";
+import fileUploadHandler from "../../middlewares/fileUploadHandler";
+const UPLOADS_FOLDER = 'uploads/users';
+const upload = fileUploadHandler(UPLOADS_FOLDER);
 
-export interface INotice {
-  target: "Individual" | "Department" | "Sells" | "Operation";
-  title: string;
 
-  employeeId: string;
-  employeeName: string;
-  position: string;
+const router = Router();
 
-  noticeType:
-    | "Warning"
-    | "Performance Improvement"
-    | "Appreciation"
-    | "Attendance"
-    | "Payroll"
-    | "Contract"
-    | "Advisory";
+router.post("/create-notice",   upload.fields([{ name: "attachment", maxCount: 1 }, { name: "profileImage", maxCount: 1 }]), NoticeController.createNotice);
 
-  publishDate: Date;
 
-  profileImage?: string;     // uploaded image
-  attachment?: string;       // document pdf
-}
+export const NoticeRoutes = router;

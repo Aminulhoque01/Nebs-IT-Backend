@@ -1,13 +1,14 @@
 import express from "express";
+import { NoticeRoutes } from "../app/modules/notice/notice.route";
  
-import { UserRoutes } from "../app/modules/user/user.route";
+ 
 
 const router = express.Router();
 
 const apiRoutes = [
   {
-    path: "/user",
-    route: UserRoutes,
+    path: "/notice",
+    route: NoticeRoutes,
   },
 ];
 
