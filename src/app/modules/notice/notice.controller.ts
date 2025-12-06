@@ -48,6 +48,19 @@ const getAllNotices = catchAsync(async (req: Request, res: Response) => {
 });
 
 
+const getSingle= catchAsync(async(req: Request, res: Response)=>{
+  const query = req.params.id;
+
+  const result = await NoticeService.getSingle(query);
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "Notices fetched successfully",
+    data: result,
+  });
+
+})
+
 const toggleStatus = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
 
@@ -129,5 +142,6 @@ export const NoticeController = {
   getAllNotices,
   toggleStatus,
   updatedNotice,
-  deleteNotice
+  deleteNotice,
+  getSingle
 };

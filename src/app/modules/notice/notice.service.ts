@@ -57,6 +57,12 @@ const getAllNotices = async (query: INoticeQuery) => {
 };
 
 
+const getSingle = async(id:string)=>{
+  const result = await Notice.findById(id);
+
+  return result;
+}
+
 const toggleStatus = async (id: string) => {
   const notice = await Notice.findById(id);
   if (!notice) return null;
@@ -72,6 +78,7 @@ const toggleStatus = async (id: string) => {
 
   return notice;
 };
+
 
 
 
@@ -92,5 +99,6 @@ export const NoticeService = {
   getAllNotices,
   toggleStatus,
   updateNotice,
-  deleteNotice
+  deleteNotice,
+  getSingle
 };
