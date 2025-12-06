@@ -10,13 +10,15 @@ const createNotice = catchAsync(async (req: Request, res: Response) => {
   if (req.files) {
     const files = req.files as any;
 
-    if (files.profileImage) {
-      payload.profileImage = "/uploads/" + files.profileImage[0].filename;
-    }
+   
 
     if (files.attachment) {
       payload.attachment = "/uploads/" + files.attachment[0].filename;
     }
+  }
+  // Default Draft if not provided
+  if (!payload.status) {
+    payload.status = "Draft";
   }
 
   const result = await NoticeService.createNotice(payload);
@@ -28,6 +30,25 @@ const createNotice = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const NoticeController={
+const getAllNotices = catchAsync(async (req: Request, res: Response) => {
+  const { page = 1, limit = 10, searchTerm, status } = req.query;
+
+  const result = await NoticeService.getAllNotices({
+    page: Number(page),
+    limit: Number(limit),
+    searchTerm: searchTerm as string,
+    status: status as string,  
+  });
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "Notices fetched successfully",
+    data: result,
+  });
+});
+
+
+export const NoticeController = {
   createNotice,
-}
+  getAllNotices
+};

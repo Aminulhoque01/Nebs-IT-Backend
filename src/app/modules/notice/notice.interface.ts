@@ -18,6 +18,18 @@ export interface INotice {
 
   publishDate: Date;
 
-  profileImage?: string;     // uploaded image
+  notice_body?: string;     // uploaded image
   attachment?: string;       // document pdf
+  status: "Published" | "Unpublished" | "Draft";
 }
+
+
+
+interface INoticeQuery {
+  page: number;
+  limit: number;
+  searchTerm?: string;
+  status?: string;  
+}
+
+export default INoticeQuery;

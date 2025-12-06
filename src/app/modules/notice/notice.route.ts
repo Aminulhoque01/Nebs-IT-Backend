@@ -7,7 +7,9 @@ const upload = fileUploadHandler(UPLOADS_FOLDER);
 
 const router = Router();
 
-router.post("/create-notice",   upload.fields([{ name: "attachment", maxCount: 1 }, { name: "profileImage", maxCount: 1 }]), NoticeController.createNotice);
+router.post("/create-notice",  upload.fields([{ name: "attachment", maxCount: 1 }]), NoticeController.createNotice);
+
+router.get("/notices", NoticeController.getAllNotices);
 
 
 export const NoticeRoutes = router;

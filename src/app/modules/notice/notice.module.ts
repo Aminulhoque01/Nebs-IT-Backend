@@ -4,7 +4,6 @@ import { INotice } from "./notice.interface";
 const NoticeSchema = new Schema<INotice>(
   {
     target: { type: String, required: true },
-
     title: { type: String, required: true, trim: true },
 
     employeeId: { type: String, required: true },
@@ -14,8 +13,14 @@ const NoticeSchema = new Schema<INotice>(
     noticeType: { type: String, required: true },
     publishDate: { type: Date, required: true },
 
-    profileImage: { type: String },
-    attachment: { type: String }
+    notice_body: { type: String },
+    attachment: { type: String },
+
+    status: {
+      type: String,
+      enum: ["Published", "Unpublished", "Draft"],
+      default: "Draft",
+    },
   },
   { timestamps: true }
 );
