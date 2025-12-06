@@ -9,11 +9,13 @@ const router = Router();
 
 router.post("/create-notice",  upload.fields([{ name: "attachment", maxCount: 1 }]), NoticeController.createNotice);
 
+
+
 router.get("/notices", NoticeController.getAllNotices);
-router.get("/:id", NoticeController.getAllNotices);
+
 
 router.patch("/:id/toggle-status", NoticeController.toggleStatus);
- 
+ router.get("/:id", NoticeController.getSingle);
 router.put("/:id",upload.fields([{ name: "attachment", maxCount: 1 }]), NoticeController.updatedNotice);
 
 router.delete("/:id", NoticeController.deleteNotice);

@@ -3,6 +3,8 @@ import catchAsync from "../../../shared/catchAsync";
 import sendResponse from "../../../shared/sendResponse";
 import { StatusCodes } from "http-status-codes";
 import { NoticeService } from "./notice.service";
+import mongoose from "mongoose";
+import ApiError from "../../../errors/ApiError";
 
 const createNotice = catchAsync(async (req: Request, res: Response) => {
   const payload = req.body;
@@ -31,13 +33,15 @@ const createNotice = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllNotices = catchAsync(async (req: Request, res: Response) => {
-  const { page = 1, limit = 10, searchTerm, status } = req.query;
+  const { page = 1, limit = 10, searchTerm, status,target,publishDate } = req.query;
 
   const result = await NoticeService.getAllNotices({
     page: Number(page),
     limit: Number(limit),
     searchTerm: searchTerm as string,
     status: status as string,  
+    target: target as string,  
+     
   });
 
   sendResponse(res, {
@@ -48,18 +52,35 @@ const getAllNotices = catchAsync(async (req: Request, res: Response) => {
 });
 
 
-const getSingle= catchAsync(async(req: Request, res: Response)=>{
-  const query = req.params.id;
+const getSingle = catchAsync(async (req: Request, res: Response): Promise<void> => {
+  const id = req.params.id;
 
-  const result = await NoticeService.getSingle(query);
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).json({
+      success: false,
+      message: "Invalid ID format",
+    });
+    return;  
+  }
+
+  const result = await NoticeService.getSingle(id);
+
+  if (!result) {
+    res.status(404).json({
+      success: false,
+      message: "Notice not found",
+    });
+    return;
+  }
 
   sendResponse(res, {
     code: StatusCodes.OK,
-    message: "Notices fetched successfully",
+    message: "Notice fetched successfully",
     data: result,
   });
+});
 
-})
+
 
 const toggleStatus = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;

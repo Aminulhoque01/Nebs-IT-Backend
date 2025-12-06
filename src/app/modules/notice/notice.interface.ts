@@ -30,6 +30,8 @@ interface INoticeQuery {
   limit: number;
   searchTerm?: string;
   status?: string;  
+  target?:string;
+  publishDate?:Date
 }
 
 export default INoticeQuery;

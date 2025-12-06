@@ -8,7 +8,7 @@ const createNotice = async (payload: string) => {
 
 
 const getAllNotices = async (query: INoticeQuery) => {
-  let { page = 1, limit = 10, searchTerm, status } = query;
+  let { page = 1, limit = 10, searchTerm, status,target,publishDate } = query;
 
   page = Number(page);
   limit = Number(limit);
@@ -30,8 +30,12 @@ const getAllNotices = async (query: INoticeQuery) => {
   let filterCondition: Record<string, any> = {};
 
   if (status) {
-    filterCondition.status = status; // Published | Unpublished | Draft
+    filterCondition.status = status; 
   }
+  if (target) {
+    filterCondition.target = target; 
+  }
+  
 
   // Final Query
   const queryCondition = {
@@ -58,6 +62,7 @@ const getAllNotices = async (query: INoticeQuery) => {
 
 
 const getSingle = async(id:string)=>{
+  
   const result = await Notice.findById(id);
 
   return result;
@@ -67,17 +72,22 @@ const toggleStatus = async (id: string) => {
   const notice = await Notice.findById(id);
   if (!notice) return null;
 
-  const nextStatus: any = {
-    Draft: "Published",
+  // Never toggle Draft
+  if (notice.status === "Draft") return notice;
+
+  const nextStatus: Record<"Published" | "Unpublished", "Published" | "Unpublished"> = {
     Published: "Unpublished",
-    Unpublished: "Draft",
+    Unpublished: "Published",
   };
 
-  notice.status = nextStatus[notice.status];
+  // Cast the value as Status
+  notice.status = nextStatus[notice.status] as "Published" | "Unpublished";
   await notice.save();
 
   return notice;
 };
+
+
 
 
 
