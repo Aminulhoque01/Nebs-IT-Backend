@@ -48,7 +48,29 @@ const getAllNotices = catchAsync(async (req: Request, res: Response) => {
 });
 
 
+const toggleStatus = catchAsync(async (req, res) => {
+  const { id } = req.params;
+
+  const result = await NoticeService.toggleStatus(id);
+
+  if (!result) {
+    return sendResponse(res, {
+      code: StatusCodes.NOT_FOUND,
+      message: "Notice not found",
+      data: null,
+    });
+  }
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "Status toggled successfully",
+    data: result,
+  });
+});
+
+
 export const NoticeController = {
   createNotice,
-  getAllNotices
+  getAllNotices,
+  toggleStatus
 };

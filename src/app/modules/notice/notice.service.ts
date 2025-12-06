@@ -57,7 +57,24 @@ const getAllNotices = async (query: INoticeQuery) => {
 };
 
 
+const toggleStatus = async (id: string) => {
+  const notice = await Notice.findById(id);
+  if (!notice) return null;
+
+  const nextStatus: any = {
+    Draft: "Published",
+    Published: "Unpublished",
+    Unpublished: "Draft",
+  };
+
+  notice.status = nextStatus[notice.status];
+  await notice.save();
+
+  return notice;
+};
+
 export const NoticeService = {
   createNotice,
-  getAllNotices
+  getAllNotices,
+  toggleStatus
 };
