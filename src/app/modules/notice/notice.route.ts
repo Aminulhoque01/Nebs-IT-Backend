@@ -12,5 +12,8 @@ router.post("/create-notice",  upload.fields([{ name: "attachment", maxCount: 1 
 router.get("/notices", NoticeController.getAllNotices);
 
 router.patch("/:id/toggle-status", NoticeController.toggleStatus);
+// Update a notice by ID
+router.put("/:id",upload.fields([{ name: "attachment", maxCount: 1 }]), NoticeController.updatedNotice);
+
 
 export const NoticeRoutes = router;

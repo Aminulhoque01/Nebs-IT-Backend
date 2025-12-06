@@ -73,8 +73,19 @@ const toggleStatus = async (id: string) => {
   return notice;
 };
 
+
+
+
+const updateNotice = async (id: string, updateData: any) => {
+  const result = await Notice.findByIdAndUpdate(id, updateData, { new: true });
+  return result; // this will be the updated document
+};
+
+ 
+
 export const NoticeService = {
   createNotice,
   getAllNotices,
-  toggleStatus
+  toggleStatus,
+  updateNotice
 };

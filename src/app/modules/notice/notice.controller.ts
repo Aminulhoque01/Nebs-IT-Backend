@@ -48,7 +48,7 @@ const getAllNotices = catchAsync(async (req: Request, res: Response) => {
 });
 
 
-const toggleStatus = catchAsync(async (req, res) => {
+const toggleStatus = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
 
   const result = await NoticeService.toggleStatus(id);
@@ -69,8 +69,44 @@ const toggleStatus = catchAsync(async (req, res) => {
 });
 
 
+const updatedNotice = catchAsync(async (req: Request, res: Response) => {
+  const noticeId = req.params.id;
+  const updateData: any = { ...req.body };
+
+  // Clean all text fields
+  for (const key in updateData) {
+    if (typeof updateData[key] === "string") {
+      updateData[key] = updateData[key].replace(/["]+/g, "").trim();
+    }
+  }
+
+  // Optional: handle file
+  if (req.file) {
+    updateData.filePath = req.file.path;
+  }
+
+  const updated = await NoticeService.updateNotice(noticeId, updateData);
+
+  if (!updated) {
+    return sendResponse(res, {
+      code: StatusCodes.NOT_FOUND,
+      message: "Notice not found",
+      data: null,
+    });
+  }
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "Notice updated successfully",
+    data: updated,
+  });
+});
+
+
+
 export const NoticeController = {
   createNotice,
   getAllNotices,
-  toggleStatus
+  toggleStatus,
+  updatedNotice
 };
